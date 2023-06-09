@@ -9,7 +9,7 @@ export default function Navigation(){
                         <div className={styles.list}>
                             <a href="/" className={styles.nav}>Home </a>
                             <a href="/buchungen" className={styles.nav}>Buchungen </a>
-                            <a href="/" className={styles.nav}>Test2 </a>
+                            <a href="/service" className={styles.nav}>Service </a>
                         </div>
                     </div>        
                 </nav>

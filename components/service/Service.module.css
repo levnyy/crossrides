@@ -1,0 +1,11 @@
+.body{
+    background-color: #0f3268;
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+    padding-bottom: 5%;
+    margin: 0% 10% 0% 10%;
+}
+
+.body div{
+    margin-left: 40px;
+}
