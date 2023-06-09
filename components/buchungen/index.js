@@ -2,10 +2,10 @@ import styles from './Buchungen.module.css'
 export default function Buchungen() {
 
     return (
+        <div className={styles.container}>
+        <h1>Ihre Buchungen</h1>
         <div className={styles.buchungen}>
-            <h1>Ihre Buchungen</h1>
 
-            <div className={styles.container}>
                 <div className={styles.content}>
                     <h2>Schiffname</h2>
                     <img src="" className={styles.image}/>
@@ -16,7 +16,8 @@ export default function Buchungen() {
                     </p>
                     <button className={styles.button}>Buchen</button>
                 </div>
+                <img src="rideplan.png" className={styles.image}/>
             </div>
-        </div>
+            </div>
     )
 }

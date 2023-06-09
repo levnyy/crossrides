@@ -1,4 +1,26 @@
-/* CSS */
+.container h1 {
+  font-size: 3em;
+}
+.buchungen {
+  display: flex;
+  flex-direction:row;
+  text-align: center;
+  font-size: 2em;
+}
+
+.content {
+  display: flex;
+  flex-direction:column;
+}
+
+.content {
+  text-align: start;
+
+}
+.content p {
+  font-size: 0.5em;
+}
+
 .button {
   appearance: none;
   background-color: #000000;
@@ -8,7 +30,6 @@
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -23,7 +44,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 100%;
+  width: 50%;
   will-change: transform;
 }
 
@@ -39,14 +60,4 @@
 .button:active {
   box-shadow: none;
   transform: translateY(0);
-}
-
-.buchungen {
-  text-align: center;
-  font-size: 2em;
-}
-
-.content {
-  text-align: start;
-  font-size: 0.5em
 }
