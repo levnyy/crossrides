@@ -8,7 +8,7 @@ export default function Navigation(){
                         <button className={styles.dropbutton}>Menu</button>
                         <div className={styles.list}>
                             <a href="/" className={styles.nav}>Home </a>
-                            <a href="/" className={styles.nav}>Test1 </a>
+                            <a href="/buchungen" className={styles.nav}>Buchungen </a>
                             <a href="/" className={styles.nav}>Test2 </a>
                         </div>
                     </div>        
