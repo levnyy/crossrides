@@ -7,33 +7,8 @@
     margin-top: 1px;
 }
 .logo {
-    width: 150px;
-    margin-left: 20px;
-    margin-top: 10px;
+    width:  400px;
 }
-.logo2{
-    width: 150px;
-    margin-left: 90%;
-    margin-top: -110px;
-}
-.button{
-    background-color: transparent;
-    border: none !important;
-    font-size:0;
-}
-.tree{
-    display: block;
-    margin-top: -200px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-}
-.guy{
-    margin-left: 28%;
-    margin-top: -40%;
-    width: 15%;
-}
-.sun{
-    margin-left: 70%;
-    width: 13%;
+.navigation{
+    margin-left: -95%;
 }
