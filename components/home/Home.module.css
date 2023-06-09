@@ -1,5 +1,26 @@
-.crossrides{
-    width: 30%;
-    height: 50%;
-    align-items: center;
+.body{
+    display: grid;
+    margin-top: 10%;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 0px 300px 0px;
+}
+.schifffahrten{
+    background-color: #0f3268;
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 10%;
+}
+.imageship{
+    width: 80%;
+    margin-left: 8%;
+}
+.buchen{
+    background-color: #0f3268;
+    grid-column: 3;
+    grid-row: 2;
+    margin-right: 10%;
+}
+.imageservice{
+    width: 45%;
+    margin-left: 27%;
 }

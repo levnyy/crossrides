@@ -3,7 +3,7 @@ export default function Buchungen() {
 
     return (
         <div className={styles.container}>
-        <h1>Ihre Buchungen</h1>
+        <h1>Buchen</h1>
         <div className={styles.buchungen}>
 
                 <div className={styles.content}>

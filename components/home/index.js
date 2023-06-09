@@ -2,10 +2,18 @@ import styles from './Home.module.css'
 export default function Home() {
 
     return (
-        <div>
-            <img src="crossrides.png" className={styles.crossrides}/>
-            <h3 className={styles.title}>Schiffahrten</h3>
-            <h3 className={styles.title}>Buchen</h3>
+        <div className={styles.body}>
+            <div className={styles.schifffahrten}>
+                <a href='/buchungen'>
+                    <img src="ship.png" className={styles.imageship}/>
+                </a>
+            </div>
+            <div className={styles.buchen}>
+                <a href="/service">
+                    <img src="services.png" className={styles.imageservice}/>
+                </a>
+            </div>
+
         </div>
     )
 }

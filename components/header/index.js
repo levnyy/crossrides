@@ -7,7 +7,9 @@ export default function Header(){
 
     return(
         <div className={styles.head}>
+            <a href="/">
                 <img src="crossrides.png" className={styles.logo}/>
+            </a>
             <Navigation className={styles.navigation}/>
             <hr/>
         </div>
