@@ -1,3 +1,9 @@
 .index {
     background: skyblue;
 }
+
+.bg-image {
+    background-image: url('/public/old_map.png');
+    width: 480px;
+    height: 480px
+  }

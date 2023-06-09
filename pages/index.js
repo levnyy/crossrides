@@ -1,11 +1,13 @@
-import styles from "./index.module.css"
+import styles from "../styles/Home.module.css"
+export default function Home() {
 
-// IndexPage ist ein Funktion, die JSX returned
-// Wir nennen solch eine Funktion einen React Component
-export default function IndexPage() {
     return (
-        <div className={styles.index}>
-            <h1>Hello World!</h1>
+        <div className="bg-image">
+            <img src="crossrides.png" className={styles.crossrides}/>
+            <h3 className={styles.title}>Schifffahrten</h3>
+            <h3 className={styles.title}>Buchen</h3>
         </div>
+        
     )
 }
+
