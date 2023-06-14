@@ -1,23 +1,50 @@
 import styles from './Buchungen.module.css'
-export default function Buchungen() {
+import {useEffect, useState} from "react";
+import Link from "next/link";
+
+export default function Items({type}) {
+    const [input, setInput] = useState("")
+    const [items,setItems] = useState([])
+    const [link,setLink] = useState()
+//useState items
+
+    useEffect(()=> {
+        const loadItem = async () => {
+            switch (type) {
+                case "charakters":
+                    const Charakters = await ApexAPI.findCharakterByName(input)
+                    const LinkShip = "/buchungen"
+                    setLink(LinkShip)
+                    setItems(Charakters)
+                    break;
+            }
+        }
+        if(!loadItem()) console.log("Posts are not loaded")
+    },[input])
+    const handleChange = (e) => setInput(e.target.value)
 
     return (
-        <div className={styles.container}>
-        <h1>Buchen</h1>
-        <div className={styles.buchungen}>
+        <>
+            <div className={styles.box}>
+                {
+                  items && items.map(item  => {
+                        return (
+                            <div key={item.id}>
+                                <ul>
+                                    <li>
 
-                <div className={styles.content}>
-                    <h2>Schiffname</h2>
-                    <img src="" className={styles.image}/>
-                    <p>
-                    bla bla bla bla bla lba Abfahrt 48min
-                    lorem ipsum autosalon apfel schwein torte leiter herz.<br/>
-                    kandersteg halten leiter  steigen essen strecke schlafen beissen teig arm kuchen bein
-                    </p>
-                    <button className={styles.button}>Buchen</button>
-                </div>
-                <img src="rideplan.png" className={styles.image}/>
+                                        <img src={item.img} className={styles.img}/>
+                                        <p>{item.name}</p>
+                                        <p>{item.reise}</p>
+                                        <Link  href={`/${link}/${item.id}`} className={styles.detailsLink}>Buchen</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        )
+                    })
+                }
             </div>
-            </div>
+        </>
     )
 }
+
