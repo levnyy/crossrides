@@ -3,6 +3,8 @@
     margin-top: 10%;
     grid-template-columns: 40% 20% 40%;
     grid-template-rows: 0px 300px 0px;
+    color: white;
+    font-size: larger;
 }
 .schifffahrten{
     background-color: #0f3268;
@@ -13,6 +15,7 @@
 .imageship{
     width: 80%;
     margin-left: 8%;
+    margin-top: -5%;
 }
 .buchen{
     background-color: #0f3268;
@@ -21,6 +24,15 @@
     margin-right: 10%;
 }
 .imageservice{
-    width: 45%;
-    margin-left: 27%;
+    width: 40%;
+    margin-left: 29%;
+    margin-top: -8%;
+}
+.titel2{
+    margin-left: 40%;
+    margin-top: -1%;
+}
+.titel1{
+    margin-left: 33%;
+    margin-top: -1%;
 }
