@@ -1,50 +1,38 @@
-import styles from './Buchungen.module.css'
+
 import {useEffect, useState} from "react";
-import Link from "next/link";
+import axios from 'axios';
 
-export default function Items({type}) {
-    const [input, setInput] = useState("")
-    const [items,setItems] = useState([])
-    const [link,setLink] = useState()
-//useState items
+export default function Buchungen(){
 
-    useEffect(()=> {
-        const loadItem = async () => {
-            switch (type) {
-                case "charakters":
-                    const Charakters = await ApexAPI.findCharakterByName(input)
-                    const LinkShip = "/buchungen"
-                    setLink(LinkShip)
-                    setItems(Charakters)
-                    break;
-            }
-        }
-        if(!loadItem()) console.log("Posts are not loaded")
-    },[input])
-    const handleChange = (e) => setInput(e.target.value)
+    const [posts, setPosts] = useState([])
 
+    const getPosts = () => {
+      axios.get("https://fn-dev-9782b81d.azurewebsites.net/api/items")
+        .then((res) => {
+          console.log(res)
+          setPosts(res.data)
+        })
+        .catch(() => {
+            console.log("Error getting data")
+        })
+    }
+  
+    useEffect(() => {
+      getPosts()
+    }, [])
+  
     return (
-        <>
-            <div className={styles.box}>
-                {
-                  items && items.map(item  => {
-                        return (
-                            <div key={item.id}>
-                                <ul>
-                                    <li>
-
-                                        <img src={item.img} className={styles.img}/>
-                                        <p>{item.name}</p>
-                                        <p>{item.reise}</p>
-                                        <Link  href={`/${link}/${item.id}`} className={styles.detailsLink}>Buchen</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-        </>
+      <div>
+        <h1>Buchen</h1>
+        {
+          posts.map(post => {
+            return (
+              <Post key={post.id} post={post} />
+            )
+          })
+        }
+  
+      </div>
     )
 }
 
