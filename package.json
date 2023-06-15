@@ -8,6 +8,9 @@
     "start": "next start -p 8080",
     "lint": "next lint"
   },
+  "keywords": [],
+  "author": "Jeremias Zuber, Jan Schoeni, Levin Keller",
+  "license": "",
   "dependencies": {
     "next": "^13.4.4",
     "react": "^18.2.0",
